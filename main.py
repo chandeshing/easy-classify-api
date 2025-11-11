@@ -8,6 +8,6 @@ async def root():
 
 
 @app.get("/square")
-async def calculate_square(number: float = Query(..., description="The number to square")):
+async def calculate_square(number: float):
     result = number ** 2
     return {"number": number, "square": result}
